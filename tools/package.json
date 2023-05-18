@@ -1,0 +1,28 @@
+{
+    "name": "aialandingpage",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Gruntfile.js",
+    "dependencies": {
+        "grunt": "^1.4.1",
+        "grunt-browser-sync": "*",
+        "grunt-cache-bust": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-uglify-es": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-sass": "^3.0.0",
+        "grunt-string-replace": "^1.0.0",
+        "grunt-usemin": "^2.6.2",
+        "jit-grunt": "*",
+        "node-sass": "^6"
+    },
+    "devDependencies": {
+        "grunt-contrib-compass": "^1.1.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+}

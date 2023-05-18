@@ -1,0 +1,3 @@
+GLOBALS = {};
+MODULES = {};
+PAGES = {};

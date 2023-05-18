@@ -1,0 +1,197 @@
+@import "variables";
+@import "custom";
+@import "vendor/bourbon/bourbon";
+@import "common";
+
+@import "modules/page-home";
+
+body {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $font-primary;
+    font-weight: $font-weight-regular;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $text-color;
+    min-height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    @include transition(opacity $page-duration-default);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+a {
+    color: $text-color;
+}
+
+a,
+a:hover,
+a:visited,
+a:active,
+a:link {
+    text-decoration: none;
+}
+
+i {
+    font-style: $font-style-italic;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    @include transition(opacity $page-duration-default/2);
+
+    &.lazy-img {
+        opacity: 0;
+    }
+
+    &.loaded {
+        opacity: 1;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: $font-weight-bold;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 36px;
+        line-height: 1.3;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 46px;
+        line-height: 1.2;
+    }
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: $font-weight-semibold;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: $font-weight-semibold;
+}
+
+p {
+    // margin: 0 auto 1em;
+
+    // &:first-child {
+    //     margin-top: 0;
+    // }
+
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+label > * {
+    pointer-events: none;
+}
+
+picture {
+    display: block;
+
+    img {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+    }
+}
+
+button {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+main {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+main,
+section {
+    position: relative;
+}
+
+section {
+    padding: 50px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 60px 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 80px 0;
+    }
+}
+
+svg {
+    fill: currentColor;
+}
+
+.btn {
+    &.btn-main {
+        color: $white;
+        font-weight: $font-weight-bold;
+        border-radius: 20px;
+        background-color: $secondary-color;
+        padding: 12px 20px 10px;
+        line-height: 1;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 24px;
+            padding: 15px 20px 12px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 38px;
+            padding: 18px 28px 14px;
+        }
+
+        &:active {
+            color: #ffe7ba;
+            background: #ad1940;
+        }
+
+        &:hover {
+            color: #ffe7ba;
+        }
+    }
+}

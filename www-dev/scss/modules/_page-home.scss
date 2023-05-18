@@ -1,0 +1,37 @@
+section {
+    &#bannerHero {
+        padding-bottom: 0;
+        background-color: $primary-color;
+        color: $white;
+        .content {
+            min-height: calc(100vh - 50px);
+            display: flex;
+            flex-direction: column;
+            &__header {
+                margin-bottom: 20px;
+            }
+            &__body {
+                margin-bottom: 20px;
+            }
+            &__footer {
+                margin-top: auto;
+                figure {
+                    margin-bottom: 0;
+                    position: relative;
+                    figcaption {
+                        position: absolute;
+                        text-align: center;
+                        font-weight: $font-weight-bold;
+                        line-height: 1.2;
+                        font-size: 10vw;
+                        bottom: 10px;
+                        left: 50%;
+                        background: #e76e2a;
+                        border-radius: 20px;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
