@@ -85,18 +85,6 @@ h1 {
     }
 }
 
-h2 {
-    font-size: 26px;
-    line-height: 32px;
-    font-weight: $font-weight-semibold;
-}
-
-h3 {
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: $font-weight-semibold;
-}
-
 p {
     // margin: 0 auto 1em;
 
@@ -135,8 +123,8 @@ button {
 }
 
 .container {
-    padding-left: 20px;
-    padding-right: 20px;
+    // padding-left: 20px;
+    // padding-right: 20px;
 }
 
 main {
@@ -167,31 +155,54 @@ svg {
 }
 
 .btn {
+    transition: all ease-out $page-duration-default/2;
     &.btn-main {
         color: $white;
         font-weight: $font-weight-bold;
-        border-radius: 20px;
-        background-color: $secondary-color;
-        padding: 12px 20px 10px;
+        border-radius: 50px;
+        padding: 14px 20px;
         line-height: 1;
+        background-color: $secondary-color;
+        border: none;
 
         @include media-breakpoint-up(lg) {
             font-size: 24px;
-            padding: 15px 20px 12px;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            font-size: 38px;
-            padding: 18px 28px 14px;
+            padding: 15px 25px;
         }
 
         &:active {
-            color: #ffe7ba;
-            background: #ad1940;
+            color: $yellow;
+            background: #222222;
         }
 
         &:hover {
-            color: #ffe7ba;
+            color: $yellow;
         }
     }
+}
+
+h2 {
+    &.title {
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 40px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 36px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+a{
+    transition: all ease-out $page-duration-default/2;
 }

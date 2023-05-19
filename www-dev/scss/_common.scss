@@ -1,0 +1,12 @@
+@mixin set-with-by-percent {
+    @for $i from 0 through 100 {
+        [data-percent="#{$i}"] {
+            $percentage: unquote("%");
+            &::after {
+                width: #{$i}$percentage!important;
+            }
+        }
+    }
+}
+
+@include set-with-by-percent;
