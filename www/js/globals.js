@@ -1,0 +1,1 @@
+GLOBALS={},PAGES={},MODULES={loadImages:{init:function(){new LazyLoad({elements_selector:".lazy-img, .img-bg-cover"}).update()}}},document.addEventListener("DOMContentLoaded",function(){MODULES.loadImages.init()}),GLOBALS.navigation={init:function(){console.log("JS READY")}},GLOBALS.navigation.init();
