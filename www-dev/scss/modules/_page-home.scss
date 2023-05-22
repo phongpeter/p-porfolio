@@ -5,7 +5,7 @@ section {
         color: $white;
         height: 100vh;
 
-        max-height: calc(180vw);
+        max-height: calc(170vw);
 
         @include media-breakpoint-up(md) {
             height: calc(100vw);
