@@ -2,11 +2,49 @@
     @for $i from 0 through 100 {
         [data-percent="#{$i}"] {
             $percentage: unquote("%");
-            &::after {
-                width: #{$i}$percentage!important;
+            &::before {
+                width: #{$i}$percentage !important;
             }
         }
     }
 }
 
 @include set-with-by-percent;
+
+
+//Define --scroller
+:root {
+    --scroller-size: 650vw;
+
+    @include media-breakpoint-up(xl) {
+        --scroller-size: 120vw;
+    }
+}
+
+
+//transition
+@mixin transition-transform(
+    $what: all,
+    $duration: 1.4s,
+    $timing: ease-in-out,
+    $delay: 0s,
+    $preface: webkit moz ms o spec
+) {
+    @each $browser in $preface {
+        @if ($browser == spec) {
+            transition: $what $duration $timing $delay;
+        } @else {
+            -#{$browser}-transition: $what $duration $timing $delay;
+        }
+    }
+}
+
+@mixin add-box-shadow($a: 5px, $b: 5px, $c: 0px, $color: $secondary-color){
+    box-shadow: $a $b $c $color;
+}
+
+@keyframes text-scroller {
+    100% {
+        transform: translateX(calc(var(--scroller-size) * -0.5));
+    }
+}

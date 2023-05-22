@@ -5,10 +5,10 @@
 // $accordion-color:                         $body-color;
 // $accordion-bg:                            $body-bg;
 
-
+$grid-gutter-width: 2rem!default;
 
 // Include parts of bootstrap-5.3.0-alpha3
 @import "vendor/bootstrap-5.3.0-alpha3/scss/bootstrap";
 
 //Font 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,400;1,800&display=swap');
