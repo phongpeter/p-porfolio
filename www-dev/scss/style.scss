@@ -10,7 +10,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     font-family: $font-primary;
-    font-weight: $font-weight-regular;
+    font-weight: $font-weight-medium;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $text-color;
@@ -183,10 +183,10 @@ svg {
 
 h2 {
     &.title {
-        font-size: 24px;
+        font-size: 30px;
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 35px;
         font-weight: 800;
 
         @include media-breakpoint-up(md) {
@@ -195,6 +195,7 @@ h2 {
 
         @include media-breakpoint-up(lg) {
             font-size: 36px;
+            margin-bottom: 40px;
         }
 
         @include media-breakpoint-up(xl) {
@@ -260,7 +261,6 @@ footer {
     .footer-content {
         padding: 40px 0 20px;
 
-        
         @include media-breakpoint-down(md) {
             text-align: center;
         }
@@ -355,7 +355,7 @@ footer {
     }
 
     .copyright {
-        padding: 12px 0;
+        padding: 40px 0 20px;
         font-size: 12px;
 
         @include media-breakpoint-up(lg) {

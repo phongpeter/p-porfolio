@@ -5,7 +5,7 @@ section {
         color: $white;
         height: 100vh;
 
-        max-height: calc(150vw);
+        max-height: calc(180vw);
 
         @include media-breakpoint-up(md) {
             height: calc(100vw);
@@ -199,7 +199,7 @@ section {
 
         .contact-btn {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .skills {
@@ -234,10 +234,10 @@ section {
                 }
 
                 ~ .skills__group {
-                    margin-top: 20px;
+                    margin-top: 40px;
 
                     @include media-breakpoint-up(md) {
-                        margin-top: 30px;
+                        margin-top: 40px;
                     }
 
                     @include media-breakpoint-up(lg) {
@@ -397,7 +397,7 @@ section {
 
                 &__time {
                     font-size: 90%;
-                    font-weight: $font-weight-regular;
+                    font-weight: $font-weight-medium;
                 }
 
                 > p {
@@ -407,7 +407,7 @@ section {
                 }
 
                 ~ .job {
-                    margin-top: 20px;
+                    margin-top: 30px;
 
                     @include media-breakpoint-up(md) {
                         margin-top: 10px;
