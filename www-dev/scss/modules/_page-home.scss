@@ -46,13 +46,14 @@ section {
 
                     li {
                         a {
-                            font-weight: $font-weight-bold;
+                            font-weight: $font-weight-xbold;
                             color: $white;
                             padding: 7px 10px;
                             border-radius: 50px;
 
                             &:hover {
                                 background-color: $secondary-color;
+                                color: $yellow;
                             }
 
                             @include media-breakpoint-up(md) {
@@ -75,7 +76,7 @@ section {
 
             &__body {
                 color: #c3b79d;
-                font-weight: $font-weight-bold;
+                font-weight: $font-weight-xbold;
                 text-align: center;
                 margin-bottom: -15vw;
 
@@ -157,7 +158,7 @@ section {
                     figcaption {
                         display: none;
                         position: absolute;
-                        font-weight: $font-weight-bold;
+                        font-weight: $font-weight-xbold;
                         line-height: 1.2;
                         font-size: 10vw;
                         bottom: 10px;
@@ -181,6 +182,8 @@ section {
 
             h3 {
                 margin-bottom: 20px;
+                color: $orange;
+                font-weight: $font-weight-xbold;
             }
 
             p {
@@ -247,7 +250,7 @@ section {
                     border-bottom: 3px solid $secondary-color;
                     text-align: center;
                     font-size: 18px;
-                    font-weight: $font-weight-bold;
+                    font-weight: $font-weight-xbold;
                 }
 
                 .skill-list {
@@ -333,7 +336,7 @@ section {
                 background-color: $orange;
                 color: $white;
                 font-size: 14px;
-                font-weight: $font-weight-bold;
+                font-weight: $font-weight-xbold;
                 z-index: 0;
 
                 @include add-box-shadow();
@@ -460,7 +463,11 @@ section {
                         font-size: 14px;
                         a {
                             font-size: 16px;
-                            font-weight: $font-weight-bold;
+                            font-weight: $font-weight-xbold;
+
+                            &:hover{
+                                color: $orange;
+                            }
                         }
 
                         @include media-breakpoint-up(md) {
@@ -553,7 +560,7 @@ section {
 
                     &:hover {
                         border-color: $secondary-color;
-                        letter-spacing: 1px;
+                        letter-spacing: 2px;
                         &::before {
                             background-color: $secondary-color;
                             color: $yellow;

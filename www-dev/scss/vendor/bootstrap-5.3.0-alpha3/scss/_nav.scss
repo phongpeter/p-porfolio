@@ -159,7 +159,7 @@
 
   .nav-link.active,
   .show > .nav-link {
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-xbold;
     color: var(--#{$prefix}nav-underline-link-active-color);
     border-bottom-color: currentcolor;
   }

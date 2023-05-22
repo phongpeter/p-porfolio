@@ -85,10 +85,10 @@ When it comes to [customization]({{< docsref "/customize/sass" >}}), the preferr
 
 ### Custom RTL values
 
-Using [RTLCSS value directives](https://rtlcss.com/learn/usage-guide/value-directives/), you can make a variable output a different value for RTL. For example, to decrease the weight for `$font-weight-bold` throughout the codebase, you may use the `/*rtl: {value}*/` syntax:
+Using [RTLCSS value directives](https://rtlcss.com/learn/usage-guide/value-directives/), you can make a variable output a different value for RTL. For example, to decrease the weight for `$font-weight-xbold` throughout the codebase, you may use the `/*rtl: {value}*/` syntax:
 
 ```scss
-$font-weight-bold: 700 #{/* rtl:600 */} !default;
+$font-weight-xbold: 700 #{/* rtl:600 */} !default;
 ```
 
 Which would output to the following for our default CSS and RTL CSS:
