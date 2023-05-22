@@ -203,6 +203,158 @@ h2 {
     }
 }
 
-a{
+a {
+    //khong ap dung hover opacity
+    // &:hover {
+    //     opacity: 0.8;
+    // }
     transition: all ease-out $page-duration-default/2;
+}
+
+ul.personal-sns {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    li {
+        a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $secondary-color;
+
+            @include media-breakpoint-up(md) {
+                width: 45px;
+                height: 45px;
+            }
+
+            img {
+                width: calc(45%);
+
+                &.img-lg {
+                    width: calc(70%);
+                }
+            }
+
+            &:hover {
+                background-color: #e76e2a;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $secondary-color;
+    color: $white;
+    a {
+        color: $yellow;
+    }
+
+    .footer-content {
+        padding: 40px 0 20px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 50px 0 30px;
+        }
+
+        h3 {
+            font-weight: $font-weight-bold;
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+
+            @include media-breakpoint-up(xl) {
+                font-size: 24px;
+            }
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            @include media-breakpoint-up(lg) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            ul {
+                &.personal-info {
+                    @include media-breakpoint-down(lg) {
+                        margin-bottom: 30px;
+                    }
+                    li {
+                        ~ li {
+                            margin-top: 10px;
+                        }
+
+                        a {
+                            display: inline-block;
+                            position: relative;
+                            padding: 10px 10px 10px 45px;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                background-color: $orange;
+                                transform: translateY(-50%);
+                            }
+                            &.phone {
+                                &::before {
+                                    background: $orange url(../img/icon_phone.svg) center no-repeat;
+                                    background-size: 50%;
+                                }
+                            }
+                            &.email {
+                                &::before {
+                                    background: $orange url(../img/icon_email.svg) center no-repeat;
+                                    background-size: 50%;
+                                }
+                            }
+                            &.location {
+                                &::before {
+                                    background: $orange url(../img/icon_location.svg) center no-repeat;
+                                    background-size: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.personal-sns {
+                    @include media-breakpoint-up(md) {
+                        justify-content: flex-start;
+                    }
+                    li {
+                        a {
+                            background-color: $orange;
+                            &:hover {
+                                background-color: #b94e12;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        padding: 12px 0;
+        font-size: 12px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 14px;
+            padding: 20px 0;
+        }
+    }
 }
