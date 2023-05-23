@@ -3,7 +3,6 @@ section {
         padding-bottom: 0;
         @include add-background-grid($primary-color, #c9a025, 0.1em, 5em);
 
-        color: $white;
         height: 100vh;
         padding-top: 1.5em;
 
@@ -113,6 +112,7 @@ section {
                                 padding: 0 5vw;
                                 // text-transform: uppercase;
                                 letter-spacing: 3px;
+                                color: $white;
 
                                 text-shadow: $secondary-color 3px 0px 0px, $secondary-color 2.83487px 0.981584px 0px,
                                     $secondary-color 2.35766px 1.85511px 0px, $secondary-color 1.62091px 2.52441px 0px,
