@@ -190,15 +190,19 @@ section {
                     text-align: center;
                     img {
                         // filter: drop-shadow(-8px 0px 3px #756a54);
-                        
+
                         @include media-breakpoint-up(md) {
                             // filter: drop-shadow(-9px 0px 4px #756a54);
                             max-height: 79vw;
                         }
-                        
+
                         @include media-breakpoint-up(lg) {
-                            // filter: drop-shadow(-9px 0px 4px #756a54);
+                            max-height: calc(100vw * 0.55);
+                        }
+
+                        @include media-breakpoint-up(xl) {
                             max-height: 79vh;
+                            height: calc(56.25vw - 80px);
                         }
                     }
                     figcaption {
@@ -540,7 +544,6 @@ section {
     &#projects {
         // background-color: #ffe9dc;
         @include add-background-grid(#ffe9dc, #dacac0, 0.1em, 5em);
-
 
         .container {
             max-width: 1000px;
