@@ -11,7 +11,6 @@
 
 @include set-with-by-percent;
 
-
 //Define --scroller
 :root {
     --scroller-size: 650vw;
@@ -20,7 +19,6 @@
         --scroller-size: 120vw;
     }
 }
-
 
 //transition
 @mixin transition-transform(
@@ -39,7 +37,7 @@
     }
 }
 
-@mixin add-box-shadow($a: 5px, $b: 5px, $c: 0px, $color: $secondary-color){
+@mixin add-box-shadow($a: 5px, $b: 5px, $c: 0px, $color: $secondary-color) {
     box-shadow: $a $b $c $color;
 }
 
@@ -47,4 +45,11 @@
     100% {
         transform: translateX(calc(var(--scroller-size) * -0.5));
     }
+}
+
+@mixin add-background-grid($bgColor: $primary-color, $gridColor: #c9a025, $width: 0.1em, $size: 5em) {
+    background-color: $bgColor;
+    background-image: linear-gradient($gridColor $width, transparent $width),
+        linear-gradient(90deg, $gridColor $width, transparent $width);
+    background-size: $size $size;
 }
