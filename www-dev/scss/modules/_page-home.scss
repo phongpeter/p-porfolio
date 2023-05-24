@@ -223,6 +223,7 @@ section {
     }
 
     &#information {
+        position: relative;
         .personal-info {
             @include media-breakpoint-down(lg) {
                 text-align: center;
@@ -255,18 +256,19 @@ section {
 
         .skills {
             margin: 0 auto;
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(md) {
                 max-width: 500px;
             }
 
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(md) {
                 display: flex;
                 gap: 20px;
-                margin-top: 50px;
+                margin-top: 20px;
             }
 
             @include media-breakpoint-up(xl) {
                 gap: 40px;
+                margin-top: 50px;
             }
 
             .skills__group {
@@ -277,22 +279,22 @@ section {
 
                 @include add-box-shadow();
 
-                @include media-breakpoint-up(lg) {
-                    width: calc((100% - 40px) / 3);
+                @include media-breakpoint-up(md) {
+                    width: calc((100% - 20px) / 2);
                 }
 
                 @include media-breakpoint-up(xl) {
-                    width: calc((100% - 80px) / 3);
+                    width: calc((100% - 50px) / 2);
                 }
 
                 ~ .skills__group {
                     margin-top: 40px;
 
-                    @include media-breakpoint-up(md) {
+                    @include media-breakpoint-up(sm) {
                         margin-top: 40px;
                     }
 
-                    @include media-breakpoint-up(lg) {
+                    @include media-breakpoint-up(md) {
                         margin-top: 0;
                     }
                 }
@@ -303,16 +305,34 @@ section {
                     text-align: center;
                     font-size: 18px;
                     font-weight: $font-weight-xbold;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 22px;
+                        padding: 15px;
+                    }
                 }
 
                 .skill-list {
                     padding: 15px;
+
+                    @include media-breakpoint-up(lg) {
+                        padding: 30px 30px;
+                    }
+
                     .skill {
                         display: flex;
                         font-size: 14px;
 
+                        @include media-breakpoint-up(lg) {
+                            font-size: 16px;
+                        }
+
                         ~ .skill {
                             margin-top: 12px;
+
+                            @include media-breakpoint-up(lg) {
+                                margin-top: 18px;
+                            }
                         }
 
                         &__name {
@@ -474,6 +494,18 @@ section {
     }
 
     &#education {
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     z-index: -1;
+        //     background: $white url(../img/img_bg_info.svg) repeat center;
+        //     background-size: 30em;
+        // }
+
         .container {
             max-width: 1000px;
         }

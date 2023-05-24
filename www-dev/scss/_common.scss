@@ -52,4 +52,5 @@
     background-image: linear-gradient($gridColor $width, transparent $width),
         linear-gradient(90deg, $gridColor $width, transparent $width);
     background-size: $size $size;
+    background-position: center;
 }
