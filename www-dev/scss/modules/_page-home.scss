@@ -224,6 +224,10 @@ section {
 
     &#information {
         position: relative;
+        .container {
+            max-width: 1000px;
+        }
+        
         .personal-info {
             @include media-breakpoint-down(lg) {
                 text-align: center;
