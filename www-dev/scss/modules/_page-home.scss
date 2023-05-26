@@ -8,7 +8,7 @@ section {
 
         max-height: calc(172vw);
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(sm) {
             height: calc(100vw);
         }
 
@@ -24,6 +24,9 @@ section {
         .content {
             display: flex;
             flex-direction: column;
+            h1{
+                display: none;
+            }
             &__header {
                 margin-bottom: 20px;
                 z-index: 1;
@@ -184,14 +187,15 @@ section {
                 position: absolute;
                 width: 100%;
                 bottom: 0;
-                figure {
-                    margin-bottom: 0;
-                    position: relative;
-                    text-align: center;
+                left: 0;
+                picture{
                     img {
+                        display: block;
+                        margin: 0 auto;
+                        width: auto;
                         // filter: drop-shadow(-8px 0px 3px #756a54);
 
-                        @include media-breakpoint-up(md) {
+                        @include media-breakpoint-up(sm) {
                             // filter: drop-shadow(-9px 0px 4px #756a54);
                             max-height: 79vw;
                         }
@@ -205,19 +209,42 @@ section {
                             height: calc(56.25vw - 80px);
                         }
                     }
-                    figcaption {
-                        display: none;
-                        position: absolute;
-                        font-weight: $font-weight-xbold;
-                        line-height: 1.2;
-                        font-size: 10vw;
-                        bottom: 10px;
-                        left: 50%;
-                        background: #e76e2a;
-                        border-radius: 25px;
-                        transform: translateX(-50%);
-                    }
                 }
+                // figure {
+                //     margin-bottom: 0;
+                //     position: relative;
+                //     // text-align: center;
+                //     img {
+                //         display: block;
+                //         margin: 0 auto;
+                //         // filter: drop-shadow(-8px 0px 3px #756a54);
+
+                //         @include media-breakpoint-up(sm) {
+                //             // filter: drop-shadow(-9px 0px 4px #756a54);
+                //             max-height: 79vw;
+                //         }
+
+                //         @include media-breakpoint-up(lg) {
+                //             max-height: calc(100vw * 0.55);
+                //         }
+
+                //         @include media-breakpoint-up(xl) {
+                //             max-height: 79vh;
+                //             height: calc(56.25vw - 80px);
+                //         }
+                //     }
+                //     figcaption {
+                //         position: absolute;
+                //         font-weight: $font-weight-xbold;
+                //         line-height: 1.2;
+                //         font-size: 10vw;
+                //         bottom: 10px;
+                //         left: 50%;
+                //         background: #e76e2a;
+                //         border-radius: 25px;
+                //         transform: translateX(-50%);
+                //     }
+                // }
             }
         }
     }
