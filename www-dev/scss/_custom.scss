@@ -1,14 +1,8 @@
 //Bootstrap variables: ==> declare before include bootstrap
-//Accordion
-// $accordion-padding-y:                     1rem;
-// $accordion-padding-x:                     1.25rem;
-// $accordion-color:                         $body-color;
-// $accordion-bg:                            $body-bg;
-
 $grid-gutter-width: 2rem!default;
 
 // Include parts of bootstrap-5.3.0-alpha3
 @import "vendor/bootstrap-5.3.0-alpha3/scss/bootstrap";
 
 //Font 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,800;1,500;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');

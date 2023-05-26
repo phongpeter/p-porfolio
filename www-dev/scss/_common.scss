@@ -1,3 +1,4 @@
+//Set width by percent
 @mixin set-with-by-percent {
     @for $i from 0 through 100 {
         [data-percent="#{$i}"] {
@@ -20,7 +21,7 @@
     }
 }
 
-//transition
+//Marquee transition
 @mixin transition-transform(
     $what: all,
     $duration: 1.4s,
@@ -37,16 +38,19 @@
     }
 }
 
+//Add box shadow
 @mixin add-box-shadow($a: 5px, $b: 5px, $c: 0px, $color: $secondary-color) {
     box-shadow: $a $b $c $color;
 }
 
+//Animation text-scroller
 @keyframes text-scroller {
     100% {
         transform: translateX(calc(var(--scroller-size) * -0.5));
     }
 }
 
+//Add background grid
 @mixin add-background-grid($bgColor: $primary-color, $gridColor: #c9a025, $width: 0.1em, $size: 5em) {
     background-color: $bgColor;
     background-image: linear-gradient($gridColor $width, transparent $width),
