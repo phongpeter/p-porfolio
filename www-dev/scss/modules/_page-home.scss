@@ -24,7 +24,7 @@ section {
         .content {
             display: flex;
             flex-direction: column;
-            h1{
+            h1 {
                 display: none;
             }
             &__header {
@@ -188,7 +188,7 @@ section {
                 width: 100%;
                 bottom: 0;
                 left: 0;
-                picture{
+                picture {
                     img {
                         display: block;
                         margin: 0 auto;
@@ -305,7 +305,7 @@ section {
             .skills__group {
                 border: 3px solid $secondary-color;
                 border-radius: 25px;
-                background: #ffe9dc;
+                background: $colorNuy;
                 overflow: hidden;
 
                 @include add-box-shadow();
@@ -404,7 +404,7 @@ section {
     }
 
     &#experience {
-        @include add-background-grid(#ffe9dc, #dacac0, 0.1em, 5em);
+        @include add-background-grid($colorNuy, #dacac0, 0.1em, 5em);
 
         .job-timeline {
             position: relative;
@@ -508,7 +508,7 @@ section {
                 &__time {
                     font-size: 90%;
                     // color: $secondary-color;
-                    
+
                     @include media-breakpoint-up(lg) {
                         margin-top: 3px;
                     }
@@ -549,7 +549,9 @@ section {
             max-width: 1000px;
         }
         .edu-list {
+            margin-bottom: 50px;
             @include media-breakpoint-up(md) {
+                margin-bottom: 70px;
                 display: flex;
                 gap: 30px;
                 li {
@@ -567,7 +569,7 @@ section {
                     gap: 15px;
                     padding: 15px;
                     border: 3px solid $secondary-color;
-                    background-color: #ffe9dc;
+                    background-color: $colorNuy;
                     border-radius: 25px;
 
                     @include add-box-shadow();
@@ -613,11 +615,47 @@ section {
                 }
             }
         }
+
+        .certificate-list {
+            li {
+                ~ li {
+                    margin-top: 20px;
+                }
+
+                a {
+                    position: relative;
+                    display: inline;
+                    background: linear-gradient(to right, $yellow, $yellow);
+                    background-size: calc(100% - 24px) 0px;
+                    background-position: 24px 100%;
+                    background-repeat: no-repeat;
+                    transition: background-size 400ms;
+
+                    &:hover,
+                    &:focus {
+                        background-size: calc(100% - 24px) 7px;
+                    }
+                }
+            }
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 50px;
+                display: flex;
+                gap: 30px;
+                flex-wrap: wrap;
+                li {
+                    width: calc((100% - 30px) / 2);
+                    ~ li {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
     }
 
     &#projects {
-        // background-color: #ffe9dc;
-        @include add-background-grid(#ffe9dc, #dacac0, 0.1em, 5em);
+        // background-color: $colorNuy;
+        @include add-background-grid($colorNuy, #dacac0, 0.1em, 5em);
 
         .container {
             max-width: 1000px;
