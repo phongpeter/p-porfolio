@@ -39,7 +39,7 @@
 }
 
 //Add box shadow
-@mixin add-box-shadow($a: 5px, $b: 5px, $c: 0px, $color: $secondary-color) {
+@mixin add-box-shadow( $color: $secondary-color, $a: 5px, $b: 5px, $c: 0px) {
     box-shadow: $a $b $c $color;
 }
 
