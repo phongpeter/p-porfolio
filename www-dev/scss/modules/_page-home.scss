@@ -615,7 +615,7 @@ section {
                 border: 12px solid $secondary-color;
                 background-color: $secondary-color;
 
-                @include add-box-shadow(#777, 6px, 6px, 0px);
+                @include add-box-shadow(#777, 8px, 8px, 0px);
                 // border-radius: 25px;
                 box-sizing: border-box;
 
