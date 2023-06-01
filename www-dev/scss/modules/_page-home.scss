@@ -562,6 +562,10 @@ section {
 
                     @include add-box-shadow();
 
+                    @include media-breakpoint-up(lg) {
+                        padding: 20px;
+                    }
+
                     &:hover {
                         background-color: $primary-color;
                     }
@@ -575,8 +579,19 @@ section {
                         background: $white;
                         align-items: center;
                         justify-content: center;
+
                         img {
                             width: 70%;
+                        }
+
+                        &.hcm-uit {
+                            background: $white url(../img/logo_hcmuit_2023.svg) center no-repeat;
+                            background-size: 79%;
+                        }
+
+                        &.hcm-us {
+                            background: $white url(../img/logo_hcmus_2023.svg) center no-repeat;
+                            background-size: 79%;
                         }
                     }
                     &-content {
@@ -694,7 +709,6 @@ section {
             }
 
             @include media-breakpoint-up(lg) {
-                
                 max-width: 1075px;
                 li {
                     width: calc((100% - 60px) / 3);
@@ -702,7 +716,6 @@ section {
             }
 
             @include media-breakpoint-up(xl) {
-                
                 gap: 50px;
                 max-width: 1075px;
                 li {
@@ -792,12 +805,12 @@ section {
                         }
                     }
 
-                    img {
-                        display: block;
-                        width: auto;
-                        max-height: 75px;
-                        margin: 0 auto;
-                    }
+                    // img {
+                    //     display: block;
+                    //     width: auto;
+                    //     max-height: 75px;
+                    //     margin: 0 auto;
+                    // }
 
                     span {
                         font-size: 22px;
@@ -808,6 +821,72 @@ section {
                         @include media-breakpoint-up(lg) {
                             font-size: 26px;
                         }
+                    }
+
+                    &.pj-teaplus {
+                        background: $white url(../img/project/logo_teaplus.png) no-repeat;
+                        background-size: 62%;
+                        background-position: center calc(50% + 15px);
+                    }
+
+                    &.pj-kose {
+                        background: $white url(../img/project/logo_kose.svg) no-repeat;
+                        background-size: 68%;
+                        background-position: center calc(50% + 15px);
+                    }
+
+                    &.pj-infroneer {
+                        background: $white url(../img/project/logo_infroneer.svg) no-repeat;
+                        background-size: auto 58%;
+                        background-position: center calc(50% + 15px);
+                    }
+
+                    &.pj-sakata {
+                        background: $white url(../img/project/logo_sakata.png) no-repeat;
+                        background-size: 60%;
+                        background-position: center calc(50% + 15px);
+                    }
+
+                    &.pj-kikumasamune {
+                        background: $white url(../img/project/logo_kikumasamune.svg) no-repeat;
+                        background-size: 68%;
+                        background-position: center calc(50% + 15px);
+                    }
+
+                    &.pj-topvalu {
+                        background: $white url(../img/project/logo_topvalu.png) no-repeat;
+                        background-size: auto 40%;
+                        background-position: center calc(50% + 15px);
+                    }
+
+                    &.pj-bictaglabel {
+                        background: $white url(../img/project/logo_bicoriginal_taglabel.svg) no-repeat;
+                        background-size: 68%;
+                        background-position: center calc(50% + 15px);
+                    }
+
+                    &.pj-bicbasic {
+                        background: $white url(../img/project/logo_bicoriginal_basic.svg) no-repeat;
+                        background-size: 76%;
+                        background-position: center calc(50% + 15px);
+                    }
+
+                    &.pj-bicselect {
+                        background: $white url(../img/project/logo_bicoriginal_select.svg) no-repeat;
+                        background-size: 76%;
+                        background-position: center calc(50% + 15px);
+                    }
+
+                    &.pj-bicoriginal {
+                        background: $white url(../img/project/logo_bicoriginal.svg) no-repeat;
+                        background-size: auto 55%;
+                        background-position: center calc(50% + 15px);
+                    }
+
+                    &.pj-bickids {
+                        background: $white url(../img/project/logo_bickids.svg) no-repeat;
+                        background-size: 76%;
+                        background-position: center calc(50% + 15px);
                     }
                 }
             }

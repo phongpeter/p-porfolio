@@ -223,26 +223,26 @@ ul.personal-sns {
     li {
         a {
             display: block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            // width: 40px;
+            // height: 40px;
+            // border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: $secondary-color;
 
             @include media-breakpoint-up(md) {
-                width: 45px;
-                height: 45px;
+                // width: 45px;
+                // height: 45px;
             }
 
-            img {
-                width: calc(45%);
+            // img {
+            //     width: calc(45%);
 
-                &.img-lg {
-                    width: calc(70%);
-                }
-            }
+            //     &.img-lg {
+            //         width: calc(70%);
+            //     }
+            // }
 
             &:hover {
                 background-color: #e76e2a;
@@ -251,11 +251,52 @@ ul.personal-sns {
     }
 }
 
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all ease-in $page-duration-default/2;
+
+    @include media-breakpoint-up(md) {
+        width: 45px;
+        height: 45px;
+    }
+
+    background-color: $secondary-color;
+
+    &:hover {
+        background-color: $orange;
+    }
+
+    &.icon-orange {
+        background-color: $orange;
+        &:hover {
+            background-color: #c1591f;
+        }
+    }
+
+    &.icon-linkedin {
+        background: $secondary-color url(../img/icon_sns_linkedin.svg) center no-repeat;
+        background-size: 42%;
+    }
+    &.icon-fbk {
+        background: $secondary-color url(../img/icon_sns_fbk.svg) center no-repeat;
+        background-size: 45%;
+    }
+    &.icon-ig {
+        background: $secondary-color url(../img/icon_sns_ig.svg) center no-repeat;
+        background-size: 45%;
+    }
+}
+
 footer {
     background-color: $secondary-color;
     color: $white;
     a {
         color: $yellow;
+        &:hover {
+            color: $colorNuy;
+        }
     }
 
     .footer-content {
@@ -304,6 +345,13 @@ footer {
                             display: inline-block;
                             position: relative;
                             padding: 10px 10px 10px 45px;
+
+                            &:hover {
+                                &::before {
+                                    background-color: $colorNuy;
+                                }
+                            }
+
                             &::before {
                                 content: "";
                                 position: absolute;
