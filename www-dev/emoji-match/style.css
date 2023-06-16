@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+#game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #fff;
+}
+
+.card::before {
+    content: attr(data-emoji);
+}
+
+.card:not(.flipped)::before {
+    opacity: 0;
+}
+
+.card.flipped {
+    background-color: #f2f2f2;
+    cursor: default;
+}
+
+.card.matched {
+    background-color: #8aff8a;
+    cursor: default;
+}
+
+#start-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#timer,
+#score {
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+#time-remaining,
+#score-value {
+    font-weight: bold;
+}
+
+ul.customize-difficulty {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+ul.customize-difficulty li {
+    position: relative;
+    padding: 10px 15px;
+    line-height: 1;
+}
+
+
+ul.customize-difficulty li label {
+    cursor: pointer;
+}
+
+ul.customize-difficulty li input {
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    z-index: -1;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+ul.customize-difficulty li input:checked {
+    background: #8aff8a;
+}
