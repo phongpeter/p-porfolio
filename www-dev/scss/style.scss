@@ -1,9 +1,11 @@
 @import "variables";
 @import "custom";
-@import "vendor/bourbon/bourbon";
+// @import "vendor/bourbon/bourbon";
 @import "common";
 
 @import "modules/page-home";
+@import "modules/global-header.scss";
+@import "modules/global-footer.scss";
 
 body {
     position: relative;
@@ -85,26 +87,10 @@ h1 {
     }
 }
 
-p {
-    // margin: 0 auto 1em;
-
-    // &:first-child {
-    //     margin-top: 0;
-    // }
-
-    // &:last-child {
-    //     margin-bottom: 0;
-    // }
-}
-
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-label > * {
-    pointer-events: none;
 }
 
 picture {
@@ -120,11 +106,6 @@ picture {
 button {
     font-size: 12px;
     font-weight: bold;
-}
-
-.container {
-    // padding-left: 20px;
-    // padding-right: 20px;
 }
 
 main {
@@ -206,10 +187,6 @@ h2 {
 }
 
 a {
-    //khong ap dung hover opacity
-    // &:hover {
-    //     opacity: 0.8;
-    // }
     transition: all ease-out $page-duration-default/2;
 }
 
@@ -223,26 +200,10 @@ ul.personal-sns {
     li {
         a {
             display: block;
-            // width: 40px;
-            // height: 40px;
-            // border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: $secondary-color;
-
-            @include media-breakpoint-up(md) {
-                // width: 45px;
-                // height: 45px;
-            }
-
-            // img {
-            //     width: calc(45%);
-
-            //     &.img-lg {
-            //         width: calc(70%);
-            //     }
-            // }
 
             &:hover {
                 background-color: #e76e2a;
@@ -289,126 +250,4 @@ ul.personal-sns {
     }
 }
 
-footer {
-    background-color: $secondary-color;
-    color: $white;
-    a {
-        color: $yellow;
-        &:hover {
-            color: $colorNuy;
-        }
-    }
 
-    .footer-content {
-        padding: 40px 0 20px;
-
-        @include media-breakpoint-down(md) {
-            text-align: center;
-        }
-
-        @include media-breakpoint-up(lg) {
-            padding: 50px 0 30px;
-        }
-
-        h3 {
-            font-weight: $font-weight-xbold;
-            font-size: 20px;
-            margin-bottom: 20px;
-            margin-top: 30px;
-
-            @include media-breakpoint-up(xl) {
-                font-size: 24px;
-            }
-        }
-
-        p {
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            @include media-breakpoint-up(lg) {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            ul {
-                &.personal-info {
-                    @include media-breakpoint-down(lg) {
-                        margin-bottom: 30px;
-                    }
-                    li {
-                        ~ li {
-                            margin-top: 10px;
-                        }
-
-                        a {
-                            display: inline-block;
-                            position: relative;
-                            padding: 10px 10px 10px 45px;
-
-                            &:hover {
-                                &::before {
-                                    background-color: $colorNuy;
-                                }
-                            }
-
-                            &::before {
-                                content: "";
-                                position: absolute;
-                                left: 0;
-                                top: 50%;
-                                width: 30px;
-                                height: 30px;
-                                border-radius: 50%;
-                                background-color: $orange;
-                                transform: translateY(-50%);
-                            }
-                            &.phone {
-                                &::before {
-                                    background: $orange url(../img/icon_phone.svg) center no-repeat;
-                                    background-size: 50%;
-                                }
-                            }
-                            &.email {
-                                &::before {
-                                    background: $orange url(../img/icon_email.svg) center no-repeat;
-                                    background-size: 50%;
-                                }
-                            }
-                            &.location {
-                                &::before {
-                                    background: $orange url(../img/icon_location.svg) center no-repeat;
-                                    background-size: 50%;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &.personal-sns {
-                    @include media-breakpoint-up(md) {
-                        justify-content: flex-start;
-                    }
-                    li {
-                        a {
-                            background-color: $orange;
-                            &:hover {
-                                background-color: #b94e12;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .copyright {
-        padding: 40px 0 20px;
-        font-size: 12px;
-
-        @include media-breakpoint-up(lg) {
-            font-size: 14px;
-            padding: 20px 0;
-        }
-    }
-}

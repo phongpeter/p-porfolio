@@ -79,8 +79,6 @@ section {
             }
 
             &__body {
-                // color: #c3b79d;
-                // color: #6500B6;
                 font-weight: $font-weight-xbold;
                 text-align: center;
                 margin-bottom: -15vw;
@@ -104,6 +102,7 @@ section {
                         width: var(--scroller-size);
                         will-change: transform; // optimise performance
                         animation: text-scroller 20s linear 0ms normal infinite;
+                        animation-delay: 5s;
                         text-indent: 0;
                         justify-content: space-around;
                         @include transition-transform(all, 10s, linear, 0ms);
@@ -113,7 +112,6 @@ section {
                             li {
                                 display: inline-block;
                                 padding: 0 5vw;
-                                // text-transform: uppercase;
                                 letter-spacing: 3px;
                                 color: $white;
 
@@ -189,7 +187,7 @@ section {
                 height: 100%;
                 bottom: 0;
                 left: 0;
-                
+
                 // picture {
                 //     img {
                 //         display: block;
