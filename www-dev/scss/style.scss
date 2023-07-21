@@ -240,6 +240,10 @@ ul.personal-sns {
         background: $secondary-color url(../img/icon_sns_linkedin.svg) center no-repeat;
         background-size: 42%;
     }
+    &.icon-skype {
+        background: $secondary-color url(../img/icon_sns_skype.svg) center no-repeat;
+        background-size: 59%;
+    }
     &.icon-fbk {
         background: $secondary-color url(../img/icon_sns_fbk.svg) center no-repeat;
         background-size: 45%;
