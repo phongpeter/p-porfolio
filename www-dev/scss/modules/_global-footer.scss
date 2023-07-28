@@ -9,14 +9,14 @@ footer {
     }
 
     .footer-content {
-        padding: 40px 0 20px;
+        padding: 40px 0 0;
 
         @include media-breakpoint-down(md) {
             text-align: center;
         }
 
         @include media-breakpoint-up(lg) {
-            padding: 50px 0 30px;
+            padding: 50px 0 0;
         }
 
         h3 {
@@ -42,9 +42,12 @@ footer {
             }
             ul {
                 &.personal-info {
-                    @include media-breakpoint-down(lg) {
-                        margin-bottom: 30px;
+                    margin-bottom: 30px;
+
+                    @include media-breakpoint-up(md) {
+                        margin-bottom: 20px;
                     }
+
                     li {
                         ~ li {
                             margin-top: 10px;

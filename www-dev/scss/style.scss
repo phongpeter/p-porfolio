@@ -141,14 +141,14 @@ svg {
         color: $white;
         font-weight: $font-weight-xbold;
         border-radius: 50px;
-        padding: 14px 20px;
+        padding: 10px 12px;
         line-height: 1;
         background-color: $secondary-color;
         border: none;
 
         @include media-breakpoint-up(lg) {
-            font-size: 24px;
-            padding: 15px 25px;
+            font-size: 20px;
+            padding: 12px 20px;
         }
 
         &:active {
@@ -195,7 +195,7 @@ ul.personal-sns {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px;
+    gap: 35px;
     justify-content: center;
     li {
         a {

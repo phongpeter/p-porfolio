@@ -115,24 +115,32 @@ section {
                                 letter-spacing: 3px;
                                 color: $white;
 
-                                text-shadow: $secondary-color 3px 0px 0px, $secondary-color 2.83487px 0.981584px 0px,
-                                    $secondary-color 2.35766px 1.85511px 0px, $secondary-color 1.62091px 2.52441px 0px,
+                                text-shadow:
+                                    $secondary-color 3px 0px 0px,
+                                    $secondary-color 2.83487px 0.981584px 0px,
+                                    $secondary-color 2.35766px 1.85511px 0px,
+                                    $secondary-color 1.62091px 2.52441px 0px,
                                     $secondary-color 0.705713px 2.91581px 0px,
                                     $secondary-color -0.287171px 2.98622px 0px,
-                                    $secondary-color -1.24844px 2.72789px 0px, $secondary-color -2.07227px 2.16926px 0px,
-                                    $secondary-color -2.66798px 1.37182px 0px, $secondary-color -2.96998px 0.42336px 0px,
+                                    $secondary-color -1.24844px 2.72789px 0px,
+                                    $secondary-color -2.07227px 2.16926px 0px,
+                                    $secondary-color -2.66798px 1.37182px 0px,
+                                    $secondary-color -2.96998px 0.42336px 0px,
                                     $secondary-color -2.94502px -0.571704px 0px,
                                     $secondary-color -2.59586px -1.50383px 0px,
                                     $secondary-color -1.96093px -2.27041px 0px,
                                     $secondary-color -1.11013px -2.78704px 0px,
                                     $secondary-color -0.137119px -2.99686px 0px,
                                     $secondary-color 0.850987px -2.87677px 0px,
-                                    $secondary-color 1.74541px -2.43999px 0px, $secondary-color 2.44769px -1.73459px 0px,
+                                    $secondary-color 1.74541px -2.43999px 0px,
+                                    $secondary-color 2.44769px -1.73459px 0px,
                                     $secondary-color 2.88051px -0.838247px 0px;
 
                                 @include media-breakpoint-up(xl) {
                                     font-size: 180px !important;
-                                    text-shadow: $secondary-color 4px 0px 0px, $secondary-color 3.87565px 0.989616px 0px,
+                                    text-shadow:
+                                        $secondary-color 4px 0px 0px,
+                                        $secondary-color 3.87565px 0.989616px 0px,
                                         $secondary-color 3.51033px 1.9177px 0px,
                                         $secondary-color 2.92676px 2.72656px 0px,
                                         $secondary-color 2.16121px 3.36588px 0px,
@@ -245,6 +253,7 @@ section {
                 text-align: center;
                 margin-bottom: 30px;
             }
+            text-align: justify;
 
             h3 {
                 margin-bottom: 20px;
@@ -259,14 +268,31 @@ section {
             }
         }
 
-        .personal-sns {
-            margin-bottom: 30px;
-        }
+        .personal-contact {
+            padding: 20px 20px;
+            border: 3px solid $secondary-color;
+            background-color: $white;
+            border-radius: 25px;
+            @include add-box-shadow();
+            @include add-background-grid($bgColor: $white, $gridColor: $colorNuy, $width: 0.033em, $size: 2.1em);
 
-        .contact-btn {
-            text-align: center;
             @include media-breakpoint-down(lg) {
                 margin-bottom: 40px;
+                display: table;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @include media-breakpoint-up(xl) {
+               margin-left: 20px;
+            }
+
+            .personal-sns {
+                margin-top: 30px;
+            }
+
+            .contact-btn {
+                text-align: center;
             }
         }
 
@@ -282,10 +308,11 @@ section {
                 margin-top: 20px;
             }
 
-            @include media-breakpoint-up(xl) {
-                gap: 40px;
-                margin-top: 50px;
+            @include media-breakpoint-up(lg) {
+                margin-top: 70px;
+                gap: 70px;
             }
+
 
             .skills__group {
                 border: 3px solid $secondary-color;
