@@ -284,7 +284,7 @@ section {
             }
 
             @include media-breakpoint-up(xl) {
-               margin-left: 20px;
+                margin-left: 20px;
             }
 
             .personal-sns {
@@ -312,7 +312,6 @@ section {
                 margin-top: 70px;
                 gap: 70px;
             }
-
 
             .skills__group {
                 border: 3px solid $secondary-color;
@@ -510,8 +509,14 @@ section {
                     z-index: -1;
                 }
 
+                &.current {
+                    background-color: #eaffdc;
+                }
+
                 &__title {
                     font-size: 120%;
+                    position: relative;
+
                     @include media-breakpoint-up(lg) {
                         margin-bottom: 3px;
                     }
