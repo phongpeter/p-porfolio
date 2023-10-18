@@ -825,13 +825,13 @@ section {
                     // }
 
                     span {
-                        font-size: 22px;
+                        font-size: 20px;
                         font-weight: bold;
                         text-align: center;
                         line-height: 1;
 
                         @include media-breakpoint-up(lg) {
-                            font-size: 26px;
+                            font-size: 24px;
                         }
                     }
 
