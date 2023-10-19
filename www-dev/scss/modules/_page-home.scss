@@ -835,6 +835,12 @@ section {
                         }
                     }
 
+                    &.pj-qrgen {
+                        background: $yellow url(https://qr.phong.info/img/og_image.png) no-repeat;
+                        background-size: 100%;
+                        background-position: center calc(50% + 15px);
+                    }
+
                     &.pj-teaplus {
                         background: $white url(../img/project/logo_teaplus.png) no-repeat;
                         background-size: 62%;
