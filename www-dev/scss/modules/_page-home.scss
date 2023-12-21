@@ -21,9 +21,20 @@ section {
             max-height: 56.25vw;
         }
 
+        > div {
+            height: 100%;
+            > div {
+                height: 100%;
+                > div {
+                    height: 100%;
+                }
+            }
+        }
+
         .content {
             display: flex;
             flex-direction: column;
+            height: 100%;
             h1 {
                 display: none;
             }
@@ -79,112 +90,180 @@ section {
             }
 
             &__body {
+                flex: 1;
                 font-weight: $font-weight-xbold;
                 text-align: center;
-                margin-bottom: -15vw;
+                // margin-bottom: -15vw;
 
                 margin-left: -1rem;
                 margin-right: -1rem;
-                .marquee-wrap {
-                    position: relative;
-                    display: block;
-                    overflow: hidden;
-                    width: 100%;
-                    &,
-                    ul {
-                        margin-left: 0;
-                        padding-left: 0;
-                        list-style-type: none;
-                    }
-                    > li {
-                        display: flex;
-                        align-items: center;
-                        width: var(--scroller-size);
-                        will-change: transform; // optimise performance
-                        animation: text-scroller 20s linear 0ms normal infinite;
-                        animation-delay: 5s;
-                        text-indent: 0;
-                        justify-content: space-around;
-                        @include transition-transform(all, 10s, linear, 0ms);
-                        white-space: nowrap;
 
-                        > ul {
-                            li {
-                                display: inline-block;
-                                padding: 0 5vw;
-                                letter-spacing: 3px;
-                                color: $white;
+                // .marquee-wrap {
+                //     position: relative;
+                //     display: block;
+                //     overflow: hidden;
+                //     width: 100%;
+                //     &,
+                //     ul {
+                //         margin-left: 0;
+                //         padding-left: 0;
+                //         list-style-type: none;
+                //     }
+                //     > li {
+                //         display: flex;
+                //         align-items: center;
+                //         width: var(--scroller-size);
+                //         will-change: transform; // optimise performance
+                //         animation: text-scroller 20s linear 0ms normal infinite;
+                //         animation-delay: 5s;
+                //         text-indent: 0;
+                //         justify-content: space-around;
+                //         @include transition-transform(all, 10s, linear, 0ms);
+                //         white-space: nowrap;
 
-                                text-shadow:
-                                    $secondary-color 3px 0px 0px,
-                                    $secondary-color 2.83487px 0.981584px 0px,
-                                    $secondary-color 2.35766px 1.85511px 0px,
-                                    $secondary-color 1.62091px 2.52441px 0px,
-                                    $secondary-color 0.705713px 2.91581px 0px,
-                                    $secondary-color -0.287171px 2.98622px 0px,
-                                    $secondary-color -1.24844px 2.72789px 0px,
-                                    $secondary-color -2.07227px 2.16926px 0px,
-                                    $secondary-color -2.66798px 1.37182px 0px,
-                                    $secondary-color -2.96998px 0.42336px 0px,
-                                    $secondary-color -2.94502px -0.571704px 0px,
-                                    $secondary-color -2.59586px -1.50383px 0px,
-                                    $secondary-color -1.96093px -2.27041px 0px,
-                                    $secondary-color -1.11013px -2.78704px 0px,
-                                    $secondary-color -0.137119px -2.99686px 0px,
-                                    $secondary-color 0.850987px -2.87677px 0px,
-                                    $secondary-color 1.74541px -2.43999px 0px,
-                                    $secondary-color 2.44769px -1.73459px 0px,
-                                    $secondary-color 2.88051px -0.838247px 0px;
+                //         > ul {
+                //             li {
+                //                 display: inline-block;
+                //                 padding: 0 5vw;
+                //                 letter-spacing: 3px;
+                //                 color: $white;
 
-                                @include media-breakpoint-up(xl) {
-                                    font-size: 180px !important;
-                                    text-shadow:
-                                        $secondary-color 4px 0px 0px,
-                                        $secondary-color 3.87565px 0.989616px 0px,
-                                        $secondary-color 3.51033px 1.9177px 0px,
-                                        $secondary-color 2.92676px 2.72656px 0px,
-                                        $secondary-color 2.16121px 3.36588px 0px,
-                                        $secondary-color 1.26129px 3.79594px 0px,
-                                        $secondary-color 0.282949px 3.98998px 0px,
-                                        $secondary-color -0.712984px 3.93594px 0px,
-                                        $secondary-color -1.66459px 3.63719px 0px,
-                                        $secondary-color -2.51269px 3.11229px 0px,
-                                        $secondary-color -3.20457px 2.39389px 0px,
-                                        $secondary-color -3.69721px 1.52664px 0px,
-                                        $secondary-color -3.95997px 0.56448px 0px,
-                                        $secondary-color -3.97652px -0.432781px 0px,
-                                        $secondary-color -3.74583px -1.40313px 0px,
-                                        $secondary-color -3.28224px -2.28625px 0px,
-                                        $secondary-color -2.61457px -3.02721px 0px,
-                                        $secondary-color -1.78435px -3.57996px 0px,
-                                        $secondary-color -0.843183px -3.91012px 0px,
-                                        $secondary-color 0.150409px -3.99717px 0px,
-                                        $secondary-color 1.13465px -3.8357px 0px,
-                                        $secondary-color 2.04834px -3.43574px 0px,
-                                        $secondary-color 2.83468px -2.82216px 0px,
-                                        $secondary-color 3.44477px -2.03312px 0px,
-                                        $secondary-color 3.84068px -1.11766px 0px,
-                                        $secondary-color 3.9978px -0.132717px 0px;
-                                }
-                            }
+                //                 text-shadow:
+                //                     $secondary-color 3px 0px 0px,
+                //                     $secondary-color 2.83487px 0.981584px 0px,
+                //                     $secondary-color 2.35766px 1.85511px 0px,
+                //                     $secondary-color 1.62091px 2.52441px 0px,
+                //                     $secondary-color 0.705713px 2.91581px 0px,
+                //                     $secondary-color -0.287171px 2.98622px 0px,
+                //                     $secondary-color -1.24844px 2.72789px 0px,
+                //                     $secondary-color -2.07227px 2.16926px 0px,
+                //                     $secondary-color -2.66798px 1.37182px 0px,
+                //                     $secondary-color -2.96998px 0.42336px 0px,
+                //                     $secondary-color -2.94502px -0.571704px 0px,
+                //                     $secondary-color -2.59586px -1.50383px 0px,
+                //                     $secondary-color -1.96093px -2.27041px 0px,
+                //                     $secondary-color -1.11013px -2.78704px 0px,
+                //                     $secondary-color -0.137119px -2.99686px 0px,
+                //                     $secondary-color 0.850987px -2.87677px 0px,
+                //                     $secondary-color 1.74541px -2.43999px 0px,
+                //                     $secondary-color 2.44769px -1.73459px 0px,
+                //                     $secondary-color 2.88051px -0.838247px 0px;
+
+                //                 @include media-breakpoint-up(xl) {
+                //                     font-size: 180px !important;
+                //                     text-shadow:
+                //                         $secondary-color 4px 0px 0px,
+                //                         $secondary-color 3.87565px 0.989616px 0px,
+                //                         $secondary-color 3.51033px 1.9177px 0px,
+                //                         $secondary-color 2.92676px 2.72656px 0px,
+                //                         $secondary-color 2.16121px 3.36588px 0px,
+                //                         $secondary-color 1.26129px 3.79594px 0px,
+                //                         $secondary-color 0.282949px 3.98998px 0px,
+                //                         $secondary-color -0.712984px 3.93594px 0px,
+                //                         $secondary-color -1.66459px 3.63719px 0px,
+                //                         $secondary-color -2.51269px 3.11229px 0px,
+                //                         $secondary-color -3.20457px 2.39389px 0px,
+                //                         $secondary-color -3.69721px 1.52664px 0px,
+                //                         $secondary-color -3.95997px 0.56448px 0px,
+                //                         $secondary-color -3.97652px -0.432781px 0px,
+                //                         $secondary-color -3.74583px -1.40313px 0px,
+                //                         $secondary-color -3.28224px -2.28625px 0px,
+                //                         $secondary-color -2.61457px -3.02721px 0px,
+                //                         $secondary-color -1.78435px -3.57996px 0px,
+                //                         $secondary-color -0.843183px -3.91012px 0px,
+                //                         $secondary-color 0.150409px -3.99717px 0px,
+                //                         $secondary-color 1.13465px -3.8357px 0px,
+                //                         $secondary-color 2.04834px -3.43574px 0px,
+                //                         $secondary-color 2.83468px -2.82216px 0px,
+                //                         $secondary-color 3.44477px -2.03312px 0px,
+                //                         $secondary-color 3.84068px -1.11766px 0px,
+                //                         $secondary-color 3.9978px -0.132717px 0px;
+                //                 }
+                //             }
+                //         }
+
+                //         &:nth-child(1) {
+                //             > ul {
+                //                 li {
+                //                     font-size: 18vw;
+                //                 }
+                //             }
+                //         }
+
+                //         // reverse second line
+                //         &:nth-child(2) {
+                //             animation-direction: reverse;
+                //             > ul {
+                //                 li {
+                //                     font-size: 17vw;
+                //                 }
+                //             }
+                //         }
+                //     }
+                // }
+
+                marquee {
+                    span {
+                        color: #fff;
+                        font-size: 25vw;
+
+                        @include media-breakpoint-up(md) {
+                            font-size: 20vw;
                         }
 
-                        &:nth-child(1) {
-                            > ul {
-                                li {
-                                    font-size: 18vw;
-                                }
-                            }
+                        &.uppercase {
+                            text-transform: uppercase;
                         }
+                        text-shadow:
+                            $secondary-color 3px 0px 0px,
+                            $secondary-color 2.83487px 0.981584px 0px,
+                            $secondary-color 2.35766px 1.85511px 0px,
+                            $secondary-color 1.62091px 2.52441px 0px,
+                            $secondary-color 0.705713px 2.91581px 0px,
+                            $secondary-color -0.287171px 2.98622px 0px,
+                            $secondary-color -1.24844px 2.72789px 0px,
+                            $secondary-color -2.07227px 2.16926px 0px,
+                            $secondary-color -2.66798px 1.37182px 0px,
+                            $secondary-color -2.96998px 0.42336px 0px,
+                            $secondary-color -2.94502px -0.571704px 0px,
+                            $secondary-color -2.59586px -1.50383px 0px,
+                            $secondary-color -1.96093px -2.27041px 0px,
+                            $secondary-color -1.11013px -2.78704px 0px,
+                            $secondary-color -0.137119px -2.99686px 0px,
+                            $secondary-color 0.850987px -2.87677px 0px,
+                            $secondary-color 1.74541px -2.43999px 0px,
+                            $secondary-color 2.44769px -1.73459px 0px,
+                            $secondary-color 2.88051px -0.838247px 0px;
 
-                        // reverse second line
-                        &:nth-child(2) {
-                            animation-direction: reverse;
-                            > ul {
-                                li {
-                                    font-size: 17vw;
-                                }
-                            }
+                        @include media-breakpoint-up(xl) {
+                            font-size: 180px !important;
+                            text-shadow:
+                                $secondary-color 4px 0px 0px,
+                                $secondary-color 3.87565px 0.989616px 0px,
+                                $secondary-color 3.51033px 1.9177px 0px,
+                                $secondary-color 2.92676px 2.72656px 0px,
+                                $secondary-color 2.16121px 3.36588px 0px,
+                                $secondary-color 1.26129px 3.79594px 0px,
+                                $secondary-color 0.282949px 3.98998px 0px,
+                                $secondary-color -0.712984px 3.93594px 0px,
+                                $secondary-color -1.66459px 3.63719px 0px,
+                                $secondary-color -2.51269px 3.11229px 0px,
+                                $secondary-color -3.20457px 2.39389px 0px,
+                                $secondary-color -3.69721px 1.52664px 0px,
+                                $secondary-color -3.95997px 0.56448px 0px,
+                                $secondary-color -3.97652px -0.432781px 0px,
+                                $secondary-color -3.74583px -1.40313px 0px,
+                                $secondary-color -3.28224px -2.28625px 0px,
+                                $secondary-color -2.61457px -3.02721px 0px,
+                                $secondary-color -1.78435px -3.57996px 0px,
+                                $secondary-color -0.843183px -3.91012px 0px,
+                                $secondary-color 0.150409px -3.99717px 0px,
+                                $secondary-color 1.13465px -3.8357px 0px,
+                                $secondary-color 2.04834px -3.43574px 0px,
+                                $secondary-color 2.83468px -2.82216px 0px,
+                                $secondary-color 3.44477px -2.03312px 0px,
+                                $secondary-color 3.84068px -1.11766px 0px,
+                                $secondary-color 3.9978px -0.132717px 0px;
                         }
                     }
                 }
