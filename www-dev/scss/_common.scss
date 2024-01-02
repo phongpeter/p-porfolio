@@ -50,6 +50,7 @@
     }
 }
 
+
 //Add background grid
 @mixin add-background-grid($bgColor: $primary-color, $gridColor: #c9a025, $width: 0.1em, $size: 5em) {
     background-color: $bgColor;
