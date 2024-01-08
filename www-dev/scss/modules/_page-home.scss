@@ -123,7 +123,7 @@ section {
 
                         > ul {
                             li {
-                                &:nth-child(odd){
+                                &:nth-child(odd) {
                                     color: $primary-color;
                                     // text-shadow: none;
                                 }
@@ -851,26 +851,31 @@ section {
                     width: calc((100% - 90px) / 4);
                 }
 
-                > a {
+                > .project-content {
+                    width: 100%;
+                    user-select: none;
+                    cursor: pointer;
                     background-color: $white;
                     padding: 32px 20px 20px;
                     border: 3px solid $secondary-color;
                     border-radius: 25px;
                     position: relative;
-                    height: 130px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    overflow: hidden;
+                    // min-height: 130px;
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+                    // overflow: hidden;
 
                     @include add-box-shadow();
 
                     @include media-breakpoint-up(lg) {
                         padding: 40px 25px 20px;
-                        height: 150px;
+                        // height: 150px;
                     }
 
                     &::before {
+                        border-top-left-radius: 19px;
+                        border-top-right-radius: 19px;
                         content: attr(data-year);
                         font-size: 12px;
                         color: #fff;
@@ -891,13 +896,19 @@ section {
                     }
 
                     &:hover {
-                        // border-color: $secondary-color;
-                        // letter-spacing: 2px;
-                        color: $orange;
-                        // text-shadow: 1px 1px 2px $secondary-color;
-                        &::before {
-                            // background-color: $secondary-color;
-                            color: $yellow;
+                        // // border-color: $secondary-color;
+                        // // letter-spacing: 2px;
+                        // color: $orange;
+                        // // text-shadow: 1px 1px 2px $secondary-color;
+                        // &::before {
+                        //     // background-color: $secondary-color;
+                        //     color: $yellow;
+                        // }
+
+                        >span {
+                            &::after{
+                                border-top-color: $orange;
+                            }
                         }
                     }
 
@@ -908,91 +919,264 @@ section {
                     //     margin: 0 auto;
                     // }
 
-                    span {
+                    > span {
                         font-size: 18px;
                         font-weight: bold;
                         text-align: center;
                         line-height: 1.25;
+                        min-height: 80px;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        &:after {
+                            content: "";
+                            width: 0px;
+                            height: 0px;
+                            border-left: 7px solid transparent;
+                            border-right: 7px solid transparent;
+                            border-top: 7px solid $secondary-color;
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translate(-50%, calc(100% + 5px));
+                            transition: all ease-in 0.35s;
+                        }
 
                         @include media-breakpoint-up(lg) {
                             font-size: 20px;
+                            min-height: 90px;
                         }
                     }
 
                     &.pj-qrgen {
-                        background: $yellow url(https://qr.phong.info/img/og_image.png) no-repeat;
-                        background-size: 100%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $yellow url(https://qr.phong.info/img/og_image.png) no-repeat;
+                            background-size: contain;
+                            background-position: center bottom;
+                        }
                     }
 
                     &.pj-teaplus {
-                        background: $white url(../img/project/logo_teaplus.png) no-repeat;
-                        background-size: 62%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $white url(../img/project/logo_teaplus.png) no-repeat;
+                            background-size: 90%;
+                            background-position: center;
+                        }
+                        // background: $white url(../img/project/logo_teaplus.png) no-repeat;
+                        // background-size: 62%;
+                        // background-position: center calc(50% + 15px);
                     }
 
                     &.pj-kose {
-                        background: $white url(../img/project/logo_kose.svg) no-repeat;
-                        background-size: 68%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $white url(../img/project/logo_kose.svg) no-repeat;
+                            background-size: 95%;
+                            background-position: center;
+                        }
+                        // background: $white url(../img/project/logo_kose.svg) no-repeat;
+                        // background-size: 68%;
+                        // background-position: center calc(50% + 15px);
                     }
 
                     &.pj-infroneer {
-                        background: $white url(../img/project/logo_infroneer.svg) no-repeat;
-                        background-size: auto 58%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $white url(../img/project/logo_infroneer.svg) no-repeat;
+                            background-size: auto 85%;
+                            background-position: center;
+                        }
+                        // background: $white url(../img/project/logo_infroneer.svg) no-repeat;
+                        // background-size: auto 58%;
+                        // background-position: center calc(50% + 15px);
                     }
 
                     &.pj-sakata {
-                        background: $white url(../img/project/logo_sakata.png) no-repeat;
-                        background-size: 60%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $white url(../img/project/logo_sakata.png) no-repeat;
+                            background-size: 80%;
+                            background-position: center;
+                        }
+                        // background: $white url(../img/project/logo_sakata.png) no-repeat;
+                        // background-size: 60%;
+                        // background-position: center calc(50% + 15px);
                     }
 
                     &.pj-kikumasamune {
-                        background: $white url(../img/project/logo_kikumasamune.svg) no-repeat;
-                        background-size: 68%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $white url(../img/project/logo_kikumasamune.svg) no-repeat;
+                            background-size: 90%;
+                            background-position: center;
+                        }
+                        // background: $white url(../img/project/logo_kikumasamune.svg) no-repeat;
+                        // background-size: 68%;
+                        // background-position: center calc(50% + 15px);
                     }
 
                     &.pj-topvalu {
-                        background: $white url(../img/project/logo_topvalu.png) no-repeat;
-                        background-size: auto 40%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $white url(../img/project/logo_topvalu.png) no-repeat;
+                            background-size: 85%;
+                            background-position: center;
+                        }
+                        // background: $white url(../img/project/logo_topvalu.png) no-repeat;
+                        // background-size: auto 40%;
+                        // background-position: center calc(50% + 15px);
                     }
 
                     &.pj-bictaglabel {
-                        background: $white url(../img/project/logo_bicoriginal_taglabel.svg) no-repeat;
-                        background-size: 68%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $white url(../img/project/logo_bicoriginal_taglabel.svg) no-repeat;
+                            background-size: 90%;
+                            background-position: center;
+                        }
+                        // background: $white url(../img/project/logo_bicoriginal_taglabel.svg) no-repeat;
+                        // background-size: 68%;
+                        // background-position: center calc(50% + 15px);
                     }
 
                     &.pj-bicbasic {
-                        background: $white url(../img/project/logo_bicoriginal_basic.svg) no-repeat;
-                        background-size: 76%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $white url(../img/project/logo_bicoriginal_basic.svg) no-repeat;
+                            background-size: 95%;
+                            background-position: center;
+                        }
+                        // background: $white url(../img/project/logo_bicoriginal_basic.svg) no-repeat;
+                        // background-size: 76%;
+                        // background-position: center calc(50% + 15px);
                     }
 
                     &.pj-bicselect {
-                        background: $white url(../img/project/logo_bicoriginal_select.svg) no-repeat;
-                        background-size: 76%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $white url(../img/project/logo_bicoriginal_select.svg) no-repeat;
+                            background-size: 95%;
+                            background-position: center;
+                        }
+                        // background: $white url(../img/project/logo_bicoriginal_select.svg) no-repeat;
+                        // background-size: 76%;
+                        // background-position: center calc(50% + 15px);
                     }
 
                     &.pj-bicoriginal {
-                        background: $white url(../img/project/logo_bicoriginal.svg) no-repeat;
-                        background-size: auto 55%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $white url(../img/project/logo_bicoriginal.svg) no-repeat;
+                            background-size: auto 80%;
+                            background-position: center;
+                        }
+                        // background: $white url(../img/project/logo_bicoriginal.svg) no-repeat;
+                        // background-size: auto 55%;
+                        // background-position: center calc(50% + 15px);
                     }
 
                     &.pj-bickids {
-                        background: $white url(../img/project/logo_bickids.svg) no-repeat;
-                        background-size: 76%;
-                        background-position: center calc(50% + 15px);
+                        > span {
+                            background: $white url(../img/project/logo_bickids.svg) no-repeat;
+                            background-size: 100%;
+                            background-position: center;
+                        }
+                        // background: $white url(../img/project/logo_bickids.svg) no-repeat;
+                        // background-size: 76%;
+                        // background-position: center calc(50% + 15px);
+                    }
+                }
+
+                input[type="checkbox"] {
+                    display: none;
+                    &:checked {
+                        ~ label {
+                            span {
+                                &::after {
+                                    opacity: 0;
+                                }
+                            }
+                            dl {
+                                dt,
+                                dd {
+                                    max-height: 300px;
+                                    margin-top: 8px;
+                                    opacity: 1;
+                                    transition:
+                                        all ease-in 0.25s 0s,
+                                        max-height ease-in 0.35s 0s,
+                                        opacity ease-in 0.2s 0.35s;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                dl {
+                    margin-bottom: 0;
+                    dt,
+                    dd {
+                        font-size: 12px;
+                        margin-top: 0px;
+                        margin-bottom: 0;
+                        max-height: 0;
+                        opacity: 0;
+                        transition:
+                            all ease-in 0.25s 0.35s,
+                            max-height ease-in 0.35s 0.35s,
+                            opacity ease-in 0.2s 0s;
+                    }
+
+                    a {
+                        font-size: 12px;
+                        word-wrap: break-word;
+                        text-decoration: underline;
+                        color: $orange;
                     }
                 }
             }
         }
+
+        // .project-details {
+        //     position: fixed;
+        //     width: 100%;
+        //     height: 100%;
+        //     top: 0;
+        //     left: 0;
+        //     background-color: #2b303430;
+        //     backdrop-filter: blur(5px);
+        //     z-index: 1;
+
+        //     .content {
+        //         position: absolute;
+        //         top: 50%;
+        //         left: 50%;
+        //         transform: translate(-50%, -50%);
+        //         width: calc(100% - 32px);
+        //         max-width: 500px;
+        //         @include add-box-shadow();
+        //         border: 3px solid $secondary-color;
+        //         border-radius: 25px;
+        //         background-color: #fff;
+        //         padding: 20px;
+
+        //         .title {
+        //             font-size: 125%;
+        //             margin-bottom: 10px;
+        //         }
+
+        //         .btn-close {
+        //             margin-left: 20px;
+        //             float: right;
+        //             width: 25px;
+        //             height: 25px;
+        //             border: 2px solid $secondary-color;
+        //             margin-left: auto;
+        //             border-radius: 100px;
+        //             cursor: pointer;
+        //         }
+
+        //         a {
+        //             color: $orange;
+        //         }
+
+        //         dt,
+        //         dd,
+        //         a {
+        //             word-wrap: break-word;
+        //         }
+        //     }
+        // }
     }
 }
-
