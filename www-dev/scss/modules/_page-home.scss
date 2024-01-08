@@ -905,8 +905,8 @@ section {
                         //     color: $yellow;
                         // }
 
-                        >span {
-                            &::after{
+                        > span {
+                            &::after {
                                 border-top-color: $orange;
                             }
                         }
@@ -1116,13 +1116,26 @@ section {
                             all ease-in 0.25s 0.35s,
                             max-height ease-in 0.35s 0.35s,
                             opacity ease-in 0.2s 0s;
+
+                        @include media-breakpoint-up(lg) {
+                            font-size: 14px;
+                        }
                     }
 
                     a {
                         font-size: 12px;
+                        font-weight: bold;
                         word-wrap: break-word;
                         text-decoration: underline;
                         color: $orange;
+
+                        &:hover{
+                            opacity: 0.7;
+                        }
+
+                        @include media-breakpoint-up(lg) {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
