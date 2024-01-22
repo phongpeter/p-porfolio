@@ -1088,6 +1088,7 @@ section {
                                 }
                             }
                             dl {
+                                pointer-events: auto;
                                 dt,
                                 dd {
                                     max-height: 300px;
@@ -1105,6 +1106,7 @@ section {
 
                 dl {
                     margin-bottom: 0;
+                    pointer-events: none;
                     dt,
                     dd {
                         font-size: 12px;
@@ -1129,7 +1131,7 @@ section {
                         text-decoration: underline;
                         color: $orange;
 
-                        &:hover{
+                        &:hover {
                             opacity: 0.7;
                         }
 
