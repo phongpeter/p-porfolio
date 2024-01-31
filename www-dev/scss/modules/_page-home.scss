@@ -948,11 +948,28 @@ section {
                         }
                     }
 
-                    &.pj-qrgen {
+                    &.pj-phonginfo {
+                        background-color: $primary-color;
                         > span {
-                            background: $yellow url(https://qr.phong.info/img/og_image.png) no-repeat;
+                            background: $primary-color url(https://phong.info/img/og_image.png) no-repeat;
                             background-size: contain;
                             background-position: center bottom;
+                        }
+                        a {
+                            color: #ac3e00;
+                        }
+                    }
+
+                    &.pj-qrgen {
+                        background-color: $primary-color;
+                        > span {
+                            background: $primary-color url(https://qr.phong.info/img/og_image.png) no-repeat;
+                            background-size: contain;
+                            background-position: center bottom;
+                        }
+
+                        a {
+                            color: #ac3e00;
                         }
                     }
 
