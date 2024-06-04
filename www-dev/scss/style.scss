@@ -137,6 +137,7 @@ svg {
 
 .btn {
     transition: all ease-out $page-duration-default/2;
+
     &.btn-main {
         color: $white;
         font-weight: $font-weight-xbold;
@@ -197,6 +198,7 @@ ul.personal-sns {
     display: flex;
     gap: 35px;
     justify-content: center;
+
     li {
         a {
             display: block;
@@ -231,6 +233,7 @@ ul.personal-sns {
 
     &.icon-orange {
         background-color: $orange;
+
         &:hover {
             background-color: #c1591f;
         }
@@ -240,14 +243,17 @@ ul.personal-sns {
         background: $secondary-color url(../img/icon_sns_linkedin.svg) center no-repeat;
         background-size: 42%;
     }
+
     &.icon-skype {
         background: $secondary-color url(../img/icon_sns_skype.svg) center no-repeat;
         background-size: 59%;
     }
+
     &.icon-fbk {
         background: $secondary-color url(../img/icon_sns_fbk.svg) center no-repeat;
         background-size: 45%;
     }
+
     &.icon-ig {
         background: $secondary-color url(../img/icon_sns_ig.svg) center no-repeat;
         background-size: 45%;
@@ -255,3 +261,33 @@ ul.personal-sns {
 }
 
 
+.btn-share-page {
+    opacity: 0;
+    pointer-events: none;
+    border: 0;
+    appearance: none;
+    position: fixed;
+    color: $white;
+    bottom: 15px;
+    left: 15px;
+    font-size: 12px;
+    border-radius: 30px;
+    padding: 6px 12px;
+    background-color: $secondary-color;
+    transition: all ease 0.3s;
+
+    @include media-breakpoint-up(xl) {
+        bottom: 20px;
+        left: 20px;
+        font-size: 12px;
+    }
+
+    &.show {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &:hover {
+        color: $primary-color;
+    }
+}
